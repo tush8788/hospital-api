@@ -6,8 +6,10 @@ const port=8000;
 
 const app=express();
 
+//convert form (post req) data into json
 app.use(bodyParser.urlencoded({extended:false}));
 
+//handle req
 app.use('/',require('./routes/index'));
 
 app.listen(port,function(err){
