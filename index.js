@@ -6,7 +6,7 @@ const app=express();
 
 app.use(bodyParser.urlencoded({extended:false}));
 
-// app.use('/',require('./routes'));
+app.use('/',require('./routes/index'));
 
 app.listen(port,function(err){
     if(err){
