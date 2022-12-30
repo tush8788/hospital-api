@@ -1,6 +1,7 @@
 const express=require('express');
 const bodyParser=require('body-parser');
 const db=require('./config/mongoose');
+const jwtStrategy=require('./config/passport-jwt-strategy');
 const port=8000;
 
 const app=express();

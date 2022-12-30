@@ -1,5 +1,7 @@
 const DoctorDB=require('../models/doctor');
+const jwt=require('jsonwebtoken');
 
+//create doctor
 module.exports.createDoctor= async function(req,res){
    // console.log(req.body);
     if(req.body.password != req.body.confrompassword){
@@ -29,4 +31,28 @@ module.exports.createDoctor= async function(req,res){
         })
     }
 
+}
+
+//login
+module.exports.login=async function(req,res){
+    
+    try{
+        
+        let doctor=await DoctorDB.findOne({username:req.body.username});
+
+        if(!doctor || doctor.password != req.body.password){
+            return res.status(422).json({
+                message:"Invaild username or password"
+            })
+        }
+
+        return res.status(200).json({
+            message:"Login Successfull keep safe your token",
+            token:jwt.sign(doctor.toJSON(),"Anyvalue",{expiresIn:10000})
+        })
+    }
+    catch(err){
+        console.log(err);
+        return res.json(500,{meassge:'Error In Delete Posts and associated comment'});
+    }
 }
