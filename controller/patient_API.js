@@ -2,20 +2,23 @@ const PatientDB=require('../models/patient');
 const ReportDB=require('../models/report');
 const DoctorDB=require('../models/doctor');
 
-//create / register patient
+//create or register patient
 module.exports.register=async function(req,res){
     try{
+        //find patient in db 
         let patient=await PatientDB.findOne({phone:req.body.phone});
+        //if patient allready present in db then just back
         if(patient){
             return res.status(409).json({
                 message:"Patient already register",
                 patient:patient
             });
         }
-
-        await PatientDB.create(req.body);
+        //if patient not then create new
+        let newpatient=await PatientDB.create(req.body);
         return res.status(200).json({
-            message:"Patient register successfully"
+            message:"Patient register successfully",
+            patient:newpatient
         })
     }
     catch(err){

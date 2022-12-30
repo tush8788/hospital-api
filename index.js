@@ -2,7 +2,8 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const db=require('./config/mongoose');
 const jwtStrategy=require('./config/passport-jwt-strategy');
-const port=8000;
+const dotenv=require('dotenv').config();
+const port=process.env.port||8000;
 
 const app=express();
 
