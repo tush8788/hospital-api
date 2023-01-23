@@ -41,6 +41,10 @@ We’re going to design an API for the doctors of a Hospital which has been allo
 
 ![plot](./screenshort/login-doctor.png)
 
+3. Set Token for Authorise request inside header of all requests
+
+![plot](./screenshort/auth.png)
+
 3. Register Patient
 
 ![plot](./screenshort/register-patient.png)
