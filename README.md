@@ -45,19 +45,19 @@ We’re going to design an API for the doctors of a Hospital which has been allo
 
 ![plot](./screenshort/auth.png)
 
-3. Register Patient
+4. Register Patient
 
 ![plot](./screenshort/register-patient.png)
 
-4. Genrate Report useing Patient by Doctor
+5. Genrate Report useing Patient by Doctor
 
 ![plot](./screenshort/genrate-report.png)
 
-5. show all reports of patient
+6. show all reports of patient
 
 ![plot](./screenshort/all-report.png)
 
-6. show all reports of status wise
+7. show all reports of status wise
 
 ![plot](./screenshort/report-status-wise.png)
 
