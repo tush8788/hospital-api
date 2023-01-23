@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+/* nav */
+header{
+    width: 100%;
+    background-color: #e3f2fd;
+    color: white;
+}
+body{
+    background-color: rgb(230, 230, 230);
+}
+/* .container{
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center; 
+} */
+/* .container div{
+    width:70%;
+
+} */
+.row{
+    background-color: white;
+    box-shadow: 0px 0px 4px 5px lightgray;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+.img-container img{
+    width: 100%;
+    height: 500px;
+}

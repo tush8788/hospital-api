@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%=title%>
+    </title>
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Hospital Api</a>
+          <form class="d-flex">
+            <a href="https://github.com/tush8788/hospital-api" class="btn btn-outline-light" target="_blank">code</a>
+          </form>
+        </div>
+    </nav>
+    <br>
+    <center>
+        <h5 style="color: brown;"><b>Use Postman tool for access api or any other frontend framework</b></h5>
+    </center>
+    
+    <br><br>
+    <div class="container">
+        <!-- 1 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>1. Register Doctor</h2>
+                <p>we need to create post request</p>
+                <b>URL to create doctor:- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/doctors/register</span></b>
+                <center>
+                    <h4>Filds</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>username</td>
+                        <td>unique name/email</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>*********</td>
+                    </tr>
+                    <tr>
+                        <td>confrompassword</td>
+                        <td>*********</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/register-doctor.png" alt="">
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>2. Login Doctor</h2>
+                <p>we need to create post req</p>
+                <b>URL to login doctor:- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/doctors/login</span></b>
+                <center>
+                    <h4>Filds</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>username</td>
+                        <td>unique name/email</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>*********</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/login-doctor.png" alt="">
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>3. Set Token for Authorise request inside header of all requests</h2>
+                
+                <b>URL to login doctor:- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/doctors/login</span></b>
+                <center>
+                    <h4>Filds</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Authorization</td>
+                        <td>Bearer __token paste here__</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/auth.png" alt="">
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>4. Register patient</h2>
+                <p>we need to create post request</p>
+                <p>we need to set token inside header for authentication becouse only doctor can add patient</p>
+                <b>URL to login doctor:- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/register</span></b>
+                <center>
+                    <h4>Header Fild</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Authorization</td>
+                        <td>Bearer __token paste here__</td>
+                    </tr>
+                </table>
+                <p>Bearer is a keyword then space then paste token</p>
+                <table  border="1" class="table table-striped">
+                   <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>name</td>
+                        <td>enter name of patient</td>
+                    </tr>
+                    <tr>
+                        <td>phone</td>
+                        <td>enter phone no</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/register-patient.png" alt="">
+            </div>
+        </div>
+        
+        <!-- 5 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>5. Genrate Report of Patient by Doctor</h2>
+                <p>we need to create post request</p>
+                <p>we need to set token inside header for authentication becouse only doctor can genrate report</p>
+                <b>URL to genrate report:- 
+                    <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/<span style="color:red;">paste patient id here</span>/create_report
+                    </span>
+                </b><br>
+                <p>like:- 
+                    <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/<span style="color:red;">63ce56a568ddc9d2e21c8857 </span>/create_report
+                    </span>
+                </p>
+                <center>
+                    <h4>Fild</h4>
+                </center>
+                <table  border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>status</td>
+                        <td>given bellow</td>
+                    </tr>
+                </table>
+                <p>status Can be either of: [Negative, Travelled-Quarantine, Symptoms-Quarantine,
+                    Positive-Admit]</p>
+            </div>
+            <div class="col img-container">
+                <img src="/img/genrate-report.png" alt="">
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>6. show all reports of patient</h2>
+                <p>we need to create get request</p>
+                <p>we need to set token inside header for authentication becouse only doctor can check reports</p>
+                <b>URL to all report:- 
+                    <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/<span style="color:red;">paste patient id here</span>/all_reports
+                    </span>
+                </b><br>
+                <p>like:- 
+                    <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/<span style="color:red;">63ce56a568ddc9d2e21c8857 </span>/all_reports
+                    </span>
+                </p>
+            </div>
+            <div class="col img-container">
+                <img src="/img/all-report.png" alt="">
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>7. show all reports of status wise</h2>
+                <p>we need to create get request</p>
+                <p>we need to set token inside header for authentication becouse only doctor can get all reports</p>
+                <b>URL to all report status wise:- 
+                    <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/reports/Symptoms-Quarantine</span>
+                </b><br>
+            
+            </div>
+            <div class="col img-container">
+                <img src="/img/report-status-wise.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

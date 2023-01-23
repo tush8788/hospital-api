@@ -35,29 +35,29 @@ We’re going to design an API for the doctors of a Hospital which has been allo
 ##Screen Short
 1. Register Doctor
 
-![plot](./screenshort/register-doctor.png)
+![plot](./assets/img/register-doctor.png)
 
 2. Login Doctor
 
-![plot](./screenshort/login-doctor.png)
+![plot](./assets/img/login-doctor.png)
 
 3. Set Token for Authorise request inside header of all requests
 
-![plot](./screenshort/auth.png)
+![plot](./assets/img/auth.png)
 
 4. Register Patient
 
-![plot](./screenshort/register-patient.png)
+![plot](./assets/img/register-patient.png)
 
 5. Genrate Report useing Patient by Doctor
 
-![plot](./screenshort/genrate-report.png)
+![plot](./assets/img/genrate-report.png)
 
 6. show all reports of patient
 
-![plot](./screenshort/all-report.png)
+![plot](./assets/img/all-report.png)
 
 7. show all reports of status wise
 
-![plot](./screenshort/report-status-wise.png)
+![plot](./assets/img/report-status-wise.png)
 

@@ -7,8 +7,13 @@ const port=process.env.port||8000;
 
 const app=express();
 
+app.set('view engine',"ejs");
+app.set('views',"./view");
+
 //convert form (post req) data into json
 app.use(bodyParser.urlencoded({extended:false}));
+
+app.use(express.static('./assets'));
 
 //handle req
 app.use('/',require('./routes/index'));

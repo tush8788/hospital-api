@@ -4,7 +4,7 @@ const passport=require('passport');
 const router=express.Router();
 
 //create patient
-router.post('/register',patientAPI.register);
+router.post('/register',passport.authenticate('jwt',{session:false}),patientAPI.register);
 
 //genrate report given patient 
 router.post('/:id/create_report',passport.authenticate('jwt',{session:false}),patientAPI.genrateReport)
